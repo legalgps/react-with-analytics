@@ -25,25 +25,22 @@ import withAnalytics, { initAnalytics } from 'react-with-analytics';
 
 initAnalytics('UA-00000000-0');
 
+const Home = () => (
+  <div>
+    HOME <Link to="/about">ABOUT</Link>
+  </div>
+);
+
+const About = () => (
+  <div>
+    ABOUT <Link to="/">HOME</Link>
+  </div>
+);
+
 const Root = () => (
   <Switch>
-    <Route
-      exact
-      path="/"
-      render={() => (
-        <div>
-          HOME <Link to="/about">ABOUT</Link>
-        </div>
-      )}
-    />
-    <Route
-      path="/about"
-      render={() => (
-        <div>
-          ABOUT <Link to="/">HOME</Link>
-        </div>
-      )}
-    />
+    <Route exact path="/" component={Home} />
+    <Route path="/about" component={About} />
   </Switch>
 );
 
