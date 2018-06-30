@@ -1,6 +1,5 @@
 import React from 'react';
 
-import ga from 'react-ga';
 import PropTypes from 'prop-types';
 
 import { trackPage } from './utils';
