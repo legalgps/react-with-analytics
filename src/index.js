@@ -1,5 +1,11 @@
 import withAnalytics from './withAnalytics';
 
-import { initAnalytics, trackUser, trackEvent } from './utils';
+import { initAnalytics, trackPage, trackUser, trackEvent } from './utils';
 
-export { withAnalytics as default, initAnalytics, trackUser, trackEvent };
+export {
+  withAnalytics as default,
+  initAnalytics,
+  trackPage,
+  trackUser,
+  trackEvent
+};

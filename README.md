@@ -2,11 +2,30 @@
 
 [![npm version](https://badge.fury.io/js/react-with-analytics.svg)](https://badge.fury.io/js/react-with-analytics)
 
-## Installation
+## Install
 
 `yarn add react-ga react-with-analytics`
 
 ## Usage
+
+### Initialize
+
+```js
+import { initAnalytics } from 'react-with-analytics';
+
+initAnalytics('UA-00000000-0');
+```
+
+### Track pages, users and events
+
+```js
+import { trackPage, trackUser, trackEvent } from 'react-with-analytics';
+
+// you can use these anywhere in your app
+trackPage('/home');
+trackUser('@username');
+trackEvent('Editing', 'Deleted Component', 'Game Widget'); // category, action, label
+```
 
 ### With react-router
 
@@ -54,14 +73,4 @@ const AppWithRouter = () => (
 );
 
 export default AppWithRouter;
-```
-
-### Tracking users and events
-
-```js
-import { trackUser, trackEvent } from 'react-with-analytics';
-
-// you can use these anywhere in your app
-trackUser('@username');
-trackEvent('Editing', 'Deleted Component', 'Game Widget');
 ```
