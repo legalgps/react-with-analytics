@@ -1,6 +1,7 @@
-# 0.0.3
+# 0.0.4
 
 - Expose `trackPage`.
+- Make `withAnalytics` pure.
 
 # 0.0.1
 

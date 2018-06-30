@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { trackPage } from './utils';
 
 export default Component =>
-  class WithAnalytics extends React.Component {
+  class WithAnalytics extends React.PureComponent {
     static propTypes = {
       location: PropTypes.shape({
         pathname: PropTypes.string.isRequired
