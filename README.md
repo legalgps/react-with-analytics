@@ -27,7 +27,7 @@ trackUser('@username');
 trackEvent('Editing', 'Deleted Component', 'Game Widget'); // category, action, label
 ```
 
-### With react-router
+### With [react-router](https://github.com/ReactTraining/react-router)
 
 ```js
 import React from 'react';
@@ -73,4 +73,37 @@ const AppWithRouter = () => (
 );
 
 export default AppWithRouter;
+```
+
+### With [pagify-it](https://github.com/sonaye/pagify-it)
+
+```js
+import React from 'react';
+
+import Router, { Link } from 'pagify-it';
+
+import { initAnalytics, trackPage } from 'react-with-analytics';
+
+initAnalytics('UA-00000000-0');
+
+const Home = () => (
+  <div>
+    HOME <Link to="/about">ABOUT</Link>
+  </div>
+);
+
+const About = () => (
+  <div>
+    ABOUT <Link to="/">HOME</Link>
+  </div>
+);
+
+const routes = {
+  '/': Home,
+  '/about': About
+};
+
+const App = () => <Router {...{ routes }} onChange={path => trackPage(path)} />;
+
+export default App;
 ```
