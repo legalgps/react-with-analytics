@@ -4,7 +4,9 @@
 
 ## Install
 
-`yarn add react-ga react-with-analytics`
+```bash
+yarn add react-ga react-with-analytics
+```
 
 ## Usage
 
