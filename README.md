@@ -65,7 +65,7 @@ const Root = () => (
   </Switch>
 );
 
-// you should only use `withAnalytics` once to warp your whole app
+// you should only use `withAnalytics` once to wrap your whole app
 const App = withRouter(withAnalytics(Root));
 
 const AppWithRouter = () => (
