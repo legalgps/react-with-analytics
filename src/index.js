@@ -8,5 +8,5 @@ export {
   trackPage,
   trackUser,
   trackEvent,
-  gaFunction as ga
+  gaFunction
 };
