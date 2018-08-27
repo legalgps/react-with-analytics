@@ -13,4 +13,4 @@ export const trackUser = (userId, opts = {}) => ga.set({ userId, ...opts });
 export const trackEvent = (category, action, label, opts = {}) =>
   ga.event({ category, action, label, ...opts });
 
-export const gaFunction = () => ga.ga();
+export function gaFunction() { return ga.ga(); }
